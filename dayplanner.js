@@ -16,7 +16,7 @@ for (var i = currentHour + 1; i < 18; i++) {
 
 }
 //on clicking the save button we save the new event to local storage
-var newEvent=
+var newEvent=[{"time-9":""}, {"time-10":""}, {"time-11":""}, {"time-12":""}, {"time-1":""}, {"time-2":""}, {"time-3":""}, {"time-4":""}, {"time-5":""}]
 $(".saveBtn").click(function(){
    localStorage.setItem("newEvent", JSON.stringify(newEvent));
    $("newEvent").text("newEvent");
