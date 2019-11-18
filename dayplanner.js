@@ -31,7 +31,6 @@ function getSavedNotes() {
     $("#1PM").val(localStorage.getItem("1PM"));
 
     // $("time-9").val(localStorage.getItem("time-9"));
-
 }
 
-
+//i can get a key and a value in application but it doesn't stay afer being refreshed.
