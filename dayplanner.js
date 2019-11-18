@@ -18,19 +18,29 @@ for (var i = currentHour + 1; i < 18; i++) {
     //not functioning.... not sure how to fix it
 }
 
-getSavedNotes();
+
 console.log("working")
-$(".saveBtn").click(function(){
-    console.log("click")
-    var time = $(this).siblings("div.hour").text();
-    var input = $(this).siblings("textarea.time-block").val();
-    localStorage.setItem(time, input);
-})
 
-function getSavedNotes() {
-    $("#1PM").val(localStorage.getItem("1PM"));
-
-    // $("time-9").val(localStorage.getItem("time-9"));
+function grabData(id) {
+    console.log("The ID is: "+ id);
+    var input= $("#"+ id).val();
+    console.log(input);
+    localStorage.setItem(id, input);
+    getSavedNotes(); 
 }
+function getSavedNotes(id) {
+    $("#"+ id).val(localStorage.getItem(id));
+    console.log(localStorage.getItem(id));    
+}
+
+getSavedNotes("9AM");
+getSavedNotes("10AM");
+getSavedNotes("11AM");
+getSavedNotes("12PM");
+getSavedNotes("1PM");
+getSavedNotes("2PM");
+getSavedNotes("3PM");
+getSavedNotes("4PM");
+getSavedNotes("5PM");
 
 //i can get a key and a value in application but it doesn't stay afer being refreshed.
