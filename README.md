@@ -1,7 +1,7 @@
 # Day Planner
 
 This is a simple day planner for a 9-5pm work day. You'll be able to put your appointments in and save them for the day so that you can effectively manage your day better.
-![dayplanner demo](.)
+![dayplanner demo](./screenshot.dox)
 
 ## Business Context
 

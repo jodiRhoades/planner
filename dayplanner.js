@@ -4,17 +4,18 @@ $("#currentDay").text(m.format("dddd, MMMM Do"));
 
 //hour blocks are color coded for current, past and future     
 var currentHour = new Date().getHours();
-currentHour= 13
 
 $('#time'+currentHour).addClass('bg-danger');
 
 //Current hour in military time
 // use the above hour to know what row to change the color
-// create a for loop to go through as the hour changes
+
 for(var i = currentHour + 1; i < 18; i++) {
     $('#time' + i).removeClass('lightgray')
     $('#time' + i).addClass('bg-success')    
 }
+
+// create a for loop to go through as the hour changes
 
 for  (var j=9; j<18; j++){
     getSavedNotes(j)
@@ -53,7 +54,7 @@ for  (var j=17; j<18; j++){
 }
 
 
-
+// when this button is clicked it will save the notes into local storage
 $('.btn').click(function() {
     var hour= $(this).val()
     localStorage.setItem(hour, $('#time'+hour).val())    
